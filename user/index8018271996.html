@@ -1,0 +1,239 @@
+Here's a complete, modern landing page with glassmorphism effects, dark mode toggle, and interactive elements:
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Minimalist UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#a855f7',
+            accent: '#ec4899',
+          },
+          boxShadow: {
+            'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+            'glass-xl': '0 8px 40px rgba(0, 0, 0, 0.2)'
+          },
+          backdropBlur: {
+            'sm': '2px',
+            'md': '4px',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .backdrop-filter {
+        backdrop-filter: var(--tw-backdrop-filter);
+      }
+      .bg-glass {
+        background: rgba(255, 255, 255, 0.25);
+      }
+      .bg-glass-dark {
+        background: rgba(15, 23, 42, 0.5);
+      }
+    }
+
+    /* Simple animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50 dark:from-slate-900 dark:to-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+  <nav class="fixed w-full z-50 bg-glass backdrop-blur-md shadow-glass border-b border-white/10 dark:bg-glass-dark">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          LuxeUI
+        </a>
+        
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#features" class="hover:text-primary transition-colors">Features</a>
+          <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+          <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+          <a href="#contact" class="px-4 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg transition-all duration-300">
+            Get Started
+          </a>
+          <button id="theme-toggle" class="p-2 rounded-full bg-white/20 dark:bg-white/10 hover:bg-white/30 transition-colors">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </button>
+        </div>
+        
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-full bg-white/20 dark:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-glass backdrop-blur-md dark:bg-glass-dark">
+      <div class="px-2 pt-2 pb-6 space-y-2">
+        <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Features</a>
+        <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Gallery</a>
+        <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Pricing</a>
+        <div class="px-3 pt-4">
+          <a href="#contact" class="block w-full text-center px-4 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-tr from-indigo-100 to-purple-50 dark:from-slate-900 dark:to-purple-900/20">
+      <div class="absolute inset-0 overflow-hidden opacity-25 dark:opacity-20">
+        <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+             class="w-full h-full object-cover" alt="Modern architecture background">
+      </div>
+      
+      <div class="container mx-auto relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in" style="animation-delay: 0.1s;">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Minimalist</span>
+              <br>
+              <span class="dark:text-white">Design Meets</span>
+              <br>
+              <span class="dark:text-white">Exceptional UX</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
+              Experience the perfect blend of aesthetics and functionality with our carefully crafted UI components.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-white hover:shadow-xl transition-all duration-300">
+                Explore Now
+              </a>
+              <a href="#features" class="px-8 py-4 rounded-full border border-gray-300 dark:border-gray-600 dark:text-white hover:border-primary hover:text-primary transition-all duration-300">
+                Learn More
+              </a>
+            </div>
+          </div>
+          
+          <div class="animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="relative rounded-2xl overflow-hidden shadow-glass-xl backdrop-blur-sm bg-white/30 dark:bg-slate-800/50 border border-white/20">
+              <img src="https://images.unsplash.com/photo-1543362906-acfc16e67564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80" 
+                   class="w-full h-auto object-cover" 
+                   alt="Modern minimalist design"
+                   onerror="this.src='https://images.pexels.com/photos/3197231/pexels-photo-3197231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+              <div class="absolute bottom-4 left-4 bg-glass backdrop-blur-sm rounded-lg p-3 border border-white/10">
+                <span class="text-xs font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">NEW COLLECTION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-primary/20 to-accent/20 text-primary dark:text-accent">WHY CHOOSE US</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4 dark:text-white">Designed for Productivity</h2>
+          <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+            Every component is crafted with attention to detail and optimized for your workflow.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-gradient-to-b from-white to-gray-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-slate-800">
+            <div class="w-14 h-14 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary dark:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 dark:text-white">Modern Interface</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Clean, intuitive UI with thoughtful animations and transitions that guide users effortlessly.
+            </p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="bg-gradient-to-b from-white to-gray-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-slate-800">
+            <div class="w-14 h-14 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary dark:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 dark:text-white">Lightning Fast</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Optimized performance with minimal dependencies and efficient rendering techniques.
+            </p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="bg-gradient-to-b from-white to-gray-50 dark:from-slate-800 dark:to-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-slate-800">
+            <div class="w-14 h-14 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary dark:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 dark:text-white">Secure by Design</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Built with security in mind from the ground up, following industry best practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-primary/20 to-accent/20 text-primary dark:text-accent">SHOWCASE</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4 dark:text-white">Visual Excellence</h2>
+          <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+            Our designs combine aesthetic perfection with outstanding usability.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Item 1 -->
+          <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="aspect-w-16 aspect-h-9">
+              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                   alt="Minimalist workspace"
+                   onerror="this.src='https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div>
+                <h3 class="text-xl font-bold text-white">Workspace UI</h3>
+                <p class="text-gray-200">Productivity meets beauty</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="aspect-w-16 aspect-h-9">
+              <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                   alt="Dashboard interface"
+                   onerror="this.src='https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black
