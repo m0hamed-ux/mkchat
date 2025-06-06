@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosbeat Premium Hotel - Luxury Redefined</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d6e6e;
+            --secondary: #e6b412;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .room-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .amenity-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-left: 5px solid var(--secondary);
+        }
+        
+        .booking-btn {
+            background: var(--secondary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .booking-btn:hover {
+            background: #c99b0d;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .social-icon {
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">Hosbeat <span class="text-warning">Hotel</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-warning text-white ms-2 px-4" href="#booking">BOOK NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="display-3 fw-bold mb-4">Experience Luxury Like Never Before</h1>
+                    <p class="lead mb-5">Hosbeat Hotel offers premium accommodations with world-class service in the heart of the city. Your perfect getaway awaits.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#booking" class="btn btn-warning btn-lg px-4 py-3 text-white fw-bold">Book Your Stay</a>
+                        <a href="#rooms" class="btn btn-outline-light btn-lg px-4 py-3">Explore Rooms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Types -->
+    <section id="rooms" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Our Luxurious Rooms</h2>
+                <p class="text-muted">Choose from our selection of premium accommodations</p>
+                <div class="divider mx-auto bg-warning" style="height: 3px; width: 80px;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" class="card-img-top" alt="Deluxe Room">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Deluxe Room</h5>
+                            <p class="card-text text-muted">Spacious room with premium amenities and stunning city views.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-warning me-2"></i> King size bed</li>
+                                <li><i class="fas fa-check text-warning me-2"></i> Premium toiletries</li>
+                                <li><i class="fas fa-check text-warning me-2"></i> 55" Smart TV</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-warning fw-bold">$199<small>/night</small></h5>
+                                <a href="#booking" class="btn btn-sm booking-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Executive Suite">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Executive Suite</h5>
+                            <p class="card-text text-muted">Luxurious suite with separate living area and premium services.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-warning me-2"></i> King bed + Sofa bed</li>
+                                <li><i class="fas fa-check text-warning me-2"></i> Premium sound system</li>
+                                <li><i class="fas fa-check text-warning me-2"></i> Private balcony</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-warning fw-bold">$299<small>/night</small></h5>
+                                <a href="#booking" class="btn btn-sm booking-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582719475256-48bdf34180b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" class="card-img-top" alt="Presidential Suite">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Presidential Suite</h5>
+                            <p class="card-text text-muted">Ultimate luxury with panoramic views and exclusive services.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-warning me-2"></i> California king bed</li>
+                                <li><i class="fas fa-check text-warning me-2"></i> Jacuzzi & sauna</li>
+                                <li><i class="fas fa-check text-warning me-2"></i> 24/7 Butler service</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-warning fw-bold">$599<small>/night</small></h5>
+                                <a href="#booking" class="btn btn-sm booking-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities -->
+    <section id="amenities" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">World-Class Amenities</h2>
+                <p class="text-muted">Experience unparalleled comfort during your stay</p>
+                <div class="divider mx-auto bg-warning" style="height: 3px; width: 80px;"></div>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-utensils amenity-icon mb-3"></i>
+                        <h5>Gourmet Dining</h5>
+                        <p class="text-muted small">3 premium restaurants with international cuisine</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-swimming-pool amenity-icon mb-3"></i>
+                        <h5>Infinity Pool</h5>
+                        <p class="text-muted small">Rooftop pool with stunning city views</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-spa amenity-icon mb-3"></i>
+                        <h5>Luxury Spa</h5>
+                        <p class="text-muted small">Full-service spa with premium treatments</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-dumbbell amenity-icon mb-3"></i>
+                        <h5>Fitness Center</h5>
+                        <p class="text-muted small">24/7 access with premium equipment</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-wifi amenity-icon mb-3"></i>
+                        <h5>High-Speed WiFi</h5>
+                        <p class="text-muted small">Complimentary ultra-fast internet</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-parking amenity-icon mb-3"></i>
+                        <h5>Valet Parking</h5>
+                        <p class="text-muted small">Secure parking with 24/7 surveillance</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-concierge-bell amenity-icon mb-3"></i>
+                        <h5>Concierge</h5>
+                        <p class="text-muted small">Personalized service for all your needs</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-4">
+                        <i class="fas fa-umbrella-beach amenity-icon mb-3"></i>
+                        <h5>Beach Access</h5>
+                        <p class="text-muted small">Private beach area with premium amenities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Guest Experiences</h2>
+                <p class="text-muted">What our guests say about their stay</p>
+                <div class="divider mx-auto bg-warning" style="height: 3px; width: 80px;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 rounded-3 h-100">
+                        <div class="d-flex mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle me-3" width="60" height="60" alt="Sarah J.">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah J.</h6>
+                                <small class="text-muted">New York, USA</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The Presidential Suite exceeded all expectations! The panoramic views, impeccable service, and attention to detail made our anniversary unforgettable. We'll definitely be back!"</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 rounded-3 h-100">
+                        <div class="d-flex mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="60" height="60" alt="Michael T.">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Michael T.</h6>
+                                <small class="text-muted">London, UK</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"As a frequent traveler, I can confidently say Hosbeat offers the best service I've experienced. The executive suite was spacious and the staff went above and beyond to accommodate my requests."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 rounded-3 h-100">
+                        <div class="d-flex mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" width="60" height="60" alt="Priya K.">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Priya K.</h6>
+                                <small class="text-muted">Mumbai, India</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The spa treatments were heavenly and the infinity pool with city views was the perfect place to unwind. The attention to cleanliness and safety measures was particularly impressive."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold display-5 mb-4">Book Your Stay</h2>
+                    <p>Ready to experience luxury at Hosbeat Hotel? Fill out the form to check availability and make a reservation. Our concierge team will be happy to assist with any special requests.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-phone-alt text-warning me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-0 text-muted">RESERVATIONS</h6>
+                                    <p class="mb-0">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-envelope text-warning me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-0 text-muted">EMAIL</h6>
+                                    <p class="mb-0">reservations@hosbeat.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white text-dark p-4 rounded-3">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="checkIn" class="form-label">Check-in Date</label>
+                                    <input type="date" class="form-control" id="checkIn" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="checkOut" class="form-label">Check-out Date</label>
+                                    <input type="date" class="form-control" id="checkOut" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="roomType" class="form-label">Room Type</label>
+                                    <select class="form-select" id="roomType" required>
+                                        <option selected disabled>Select Room</option>
+                                        <option>Deluxe Room</option>
+                                        <option>Executive Suite</option>
+                                        <option>Presidential Suite</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="guests" class="form-label">Guests</label>
+                                    <select class="form-select" id="guests" required>
+                                        <option selected>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-dark w-100 py-3 fw-bold">Check Availability</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Get In Touch</h2>
+                <p class="text-muted">We'd love to hear from you</p>
+                <div class="divider mx-auto bg-warning" style="height: 3px; width: 80px;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="pe-lg-5">
+                        <h5 class="fw-bold mb-4">Contact Information</h5>
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-map-marker-alt text-warning me-3 mt-1"></i>
+                            <p class="mb-0">123 Luxury Avenue, Downtown District, Metropolitan City</p>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-phone-alt text-warning me-3 mt-1"></i>
+                            <p class="mb-0">+1 (555) 123-4567</p>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-envelope text-warning me-3 mt-1"></i>
+                            <p class="mb-0">info@hosbeat.com</p>
+                        </div>
+                        
+                        <h5 class="fw-bold mt-5 mb-4">Opening Hours</h5>
+                        <p>Reception: 24/7</p>
+                        <p>Restaurants: 6:00 AM - 11:00 PM</p>
+                        <p>Spa: 8:00 AM - 10:00 PM</p>
+                        
+                        <div class="mt-5">
+                            <h5 class="fw-bold mb-4">Follow Us</h5>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-dark py-3 px-4 fw-bold">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-4">Hosbeat Hotel</h5>
+                    <p class="text-muted">Redefining luxury hospitality with world-class service and exceptional experiences since 2005.</p>
+                    <p class="text-muted">Member of Luxury Hotels International</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold text-white mb-4">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#rooms" class="text-muted text-decoration-none">Rooms</a></li>
+                        <li class="mb-2"><a href="#amenities" class="text-muted text-decoration-none">Amenities</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-muted text-decoration-none">Testimonials</a></li>
+                        <li><a href="#contact" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold text-white mb-4">Newsletter</h6>
+                    <p class="text-muted">Subscribe to receive exclusive offers and updates</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold text-white mb-4">Awards</h6>
+                    <div class="d-flex flex-wrap gap-3">
+                        <img src="https://via.placeholder.com/80x40?text=Award+1" class="img-fluid" alt="Award 1">
+                        <img src="https://via.placeholder.com/80x40?text=Award+2" class="img-fluid" alt="Award 2">
+                        <img src="https://via.placeholder.com/80x40?text=Award+3" class="img-fluid" alt="Award 3">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2023 Hosbeat Hotel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-warning btn-lg rounded-circle position-fixed bottom-0 end-0 m-4" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Back to top button
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            
+            $('#back-to-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+            
+            // Smooth scrolling for all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 70
+                    }, 800);
+                }
+            });
+            
+            // Update year in copyright
+            $('#currentYear').text(new Date().getFullYear());
+        });
+    </script>
+</body>
+</html>
