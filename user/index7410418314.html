@@ -1,0 +1,449 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosbeat Hotel - Luxury Redefined</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+        .room-card {
+            transition: transform 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-10px);
+        }
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black bg-opacity-70">
+        <div class="container">
+            <a class="navbar-brand text-2xl font-bold text-white" href="#">
+                HOSBEAT <span class="text-yellow-400">HOTEL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white hover:text-yellow-400 px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white hover:text-yellow-400 px-3" href="#rooms">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link text-white hover:text-yellow-400 px-3" href="#amenities">Amenities</a></li>
+                    <li class="nav-item"><a class="nav-link text-white hover:text-yellow-400 px-3" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link text-white hover:text-yellow-400 px-3" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-warning ms-3 px-4" href="#book">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Experience Luxury Redefined</h1>
+                    <p class="lead mb-5">Welcome to Hosbeat Hotel, where elegance meets comfort in the heart of the city. Your perfect getaway awaits.</p>
+                    <a href="#book" class="btn btn-warning btn-lg px-4 me-2">Book Now</a>
+                    <a href="#rooms" class="btn btn-outline-light btn-lg px-4">Explore Rooms</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotel Lobby" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Discover Hosbeat Hotel</h2>
+                    <p class="text-muted mb-4">Established in 2010, Hosbeat Hotel has been providing world-class hospitality services to travelers from around the globe. Our commitment to excellence has made us the preferred choice for both business and leisure travelers.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-yellow-400 me-2"></i> 24/7 concierge service</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-400 me-2"></i> Award-winning restaurant</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-400 me-2"></i> State-of-the-art fitness center</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-400 me-2"></i> Rooftop swimming pool</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-400 me-2"></i> Free high-speed Wi-Fi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Rooms & Suites</h2>
+                <p class="text-muted">Choose from our exquisite selection of accommodations</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Deluxe Room">
+                        <div class="card-body">
+                            <h5 class="card-title">Deluxe Room</h5>
+                            <p class="text-muted">Spacious comfort with modern amenities for a relaxing stay.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="h5 text-dark">$199<small class="text-muted">/night</small></span>
+                                <a href="#book" class="btn btn-sm btn-outline-warning">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Executive Suite">
+                        <div class="card-body">
+                            <h5 class="card-title">Executive Suite</h5>
+                            <p class="text-muted">Luxurious accommodation with separate living and sleeping areas.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="h5 text-dark">$349<small class="text-muted">/night</small></span>
+                                <a href="#book" class="btn btn-sm btn-outline-warning">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Presidential Suite">
+                        <div class="card-body">
+                            <h5 class="card-title">Presidential Suite</h5>
+                            <p class="text-muted">Ultimate luxury with premium services and breathtaking views.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="h5 text-dark">$599<small class="text-muted">/night</small></span>
+                                <a href="#book" class="btn btn-sm btn-outline-warning">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Hotel Amenities</h2>
+                <p class="text-muted">Enjoy our world-class facilities during your stay</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-utensils text-yellow-400 mb-3" style="font-size: 2.5rem;"></i>
+                        <h5>Fine Dining</h5>
+                        <p class="text-muted">Gourmet cuisine prepared by our award-winning chefs</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-swimming-pool text-yellow-400 mb-3" style="font-size: 2.5rem;"></i>
+                        <h5>Swimming Pool</h5>
+                        <p class="text-muted">Rooftop infinity pool with stunning city views</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-dumbbell text-yellow-400 mb-3" style="font-size: 2.5rem;"></i>
+                        <h5>Fitness Center</h5>
+                        <p class="text-muted">State-of-the-art equipment available 24/7</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-spa text-yellow-400 mb-3" style="font-size: 2.5rem;"></i>
+                        <h5>Spa Services</h5>
+                        <p class="text-muted">Relax and rejuvenate with our treatments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Gallery</h2>
+                <p class="text-muted">Experience Hosbeat through our photo gallery</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-3 col-6">
+                    <img src="https://images.unsplash.com/photo-1582719478469-d1b9c8b5a0d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow-sm" alt="Hotel Lobby">
+                </div>
+                <div class="col-md-3 col-6">
+                    <img src="https://images.unsplash.com/photo-1551882547-353eb5d9991f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow-sm" alt="Room Interior">
+                </div>
+                <div class="col-md-3 col-6">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow-sm" alt="Restaurant">
+                </div>
+                <div class="col-md-3 col-6">
+                    <img src="https://images.unsplash.com/photo-1601760562234-9814ee965576?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow-sm" alt="Pool Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our Guests Say</h2>
+                <p class="text-muted">Read testimonials from our satisfied guests</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The service at Hosbeat was exceptional. The staff went above and beyond to make our anniversary special. We'll definitely be back!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">Robert Chen</h6>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Perfect location, amazing amenities, and the most comfortable bed I've ever slept in. The rooftop pool has the best view in the city."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">Emily Wilson</h6>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Everything was impeccable from check-in to check-out. The breakfast buffet was fantastic and the spa services were divine."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Special Offers</h2>
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="text-yellow-400">Summer Getaway Package</h5>
+                            <p class="mb-2">Enjoy 3 nights for the price of 2 in any deluxe room. Includes complimentary breakfast and late check-out.</p>
+                            <small class="text-muted">Valid until August 31</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-yellow-400">Honeymoon Package</h5>
+                            <p class="mb-2">Romantic suite, champagne on arrival, couples massage, and sunset dinner by the pool.</p>
+                            <small class="text-muted">All year round</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="fw-bold mb-4">Book Your Stay</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Check-In Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Check-Out Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Room Type</label>
+                                    <select class="form-select">
+                                        <option>Deluxe Room</option>
+                                        <option>Executive Suite</option>
+                                        <option>Presidential Suite</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Guests</label>
+                                    <select class="form-select">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4+</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100">Check Availability</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Contact Us</h2>
+                <p class="text-muted">Get in touch with our team</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mb-3" style="font-size: 2rem;"></i>
+                            <h5>Address</h5>
+                            <p class="text-muted mb-0">123 Luxury Avenue<br>Downtown, City Center 10001</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-phone-alt text-yellow-400 mb-3" style="font-size: 2rem;"></i>
+                            <h5>Phone</h5>
+                            <p class="text-muted mb-0">+1 (555) 123-4567<br>Mon-Sun, 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-envelope text-yellow-400 mb-3" style="font-size: 2rem;"></i>
+                            <h5>Email</h5>
+                            <p class="text-muted mb-0">info@hosbeathotel.com<br>reservations@hosbeathotel.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-uppercase fw-bold mb-4">HOSBEAT HOTEL</h4>
+                    <p>Your luxury home away from home. Experience world-class service and accommodations in the heart of the city.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#rooms" class="text-white text-decoration-none">Rooms</a></li>
+                        <li class="mb-2"><a href="#amenities" class="text-white text-decoration-none">Amenities</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fw-bold mb-4">Newsletter</h5>
+                    <p>Subscribe to receive updates and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-warning" type="button">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="text-uppercase fw-bold mb-4">Opening Hours</h5>
+                    <p class="mb-1">Reception: 24/7</p>
+                    <p class="mb-1">Restaurant: 6:30 AM - 11 PM</p>
+                    <p class="mb-1">Spa: 9 AM - 9 PM</p>
+                    <p>Pool: 7 AM - 10 PM</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-10">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Hosbeat Hotel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
