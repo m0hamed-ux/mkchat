@@ -1,0 +1,428 @@
+Here's a sleek, responsive landing page for a cloud computing company:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyNimbus - Cloud Computing Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: scale(1.03);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-bg fixed-top">
+        <div class="container px-6 py-3">
+            <a class="navbar-brand text-2xl font-bold" href="#">
+                <i class="fas fa-cloud mr-2"></i>SkyNimbus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#features" class="nav-link px-3">Features</a></li>
+                    <li class="nav-item"><a href="#solutions" class="nav-link px-3">Solutions</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link px-3">Pricing</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link px-3">Testimonials</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link px-3">Contact</a></li>
+                </ul>
+                <div class="ms-4">
+                    <a href="#" class="btn btn-light rounded-pill px-4 py-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="gradient-bg text-white pt-32 pb-20">
+        <div class="container px-6">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-10 mb-lg-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Powering The Future With Cloud Computing</h1>
+                    <p class="text-xl mb-6 opacity-90">Scalable, secure, and reliable cloud solutions for businesses of all sizes. Accelerate your digital transformation today.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#pricing" class="btn btn-light btn-lg rounded-pill px-6">Get Started</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg rounded-pill px-6">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Cloud computing infrastructure" class="rounded-lg shadow-xl img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center py-5">
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=30&q=80" alt="Company logo" class="img-fluid" style="height: 30px;">
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=30&q=80" alt="Company logo" class="img-fluid" style="height: 30px;">
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=30&q=80" alt="Company logo" class="img-fluid" style="height: 30px;">
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1631549916768-a411b58f6f1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=30&q=80" alt="Company logo" class="img-fluid" style="height: 30px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="features" class="py-16">
+        <div class="container px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Enterprise-Grade Cloud Solutions</h2>
+                <p class="text-xl text-gray-600">Our comprehensive suite of cloud services helps you build, deploy, and scale applications effortlessly</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="text-blue-500 mb-4 text-4xl"><i class="fas fa-server"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Infrastructure</h3>
+                        <p class="text-gray-600">Highly available virtual machines with flexible configurations to match your workload needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="text-blue-500 mb-4 text-4xl"><i class="fas fa-database"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Database</h3>
+                        <p class="text-gray-600">Fully managed relational and NoSQL databases with automated backups and scaling.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="text-blue-500 mb-4 text-4xl"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Networking</h3>
+                        <p class="text-gray-600">Global content delivery, load balancing, and dedicated private network connectivity.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="text-blue-500 mb-4 text-4xl"><i class="fas fa-lock"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Security</h3>
+                        <p class="text-gray-600">Advanced threat protection, encryption, and compliance certifications for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-16 bg-gray-50">
+        <div class="container px-6">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-10 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Cloud architecture" class="rounded-lg shadow-xl img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-blue-500 font-semibold">CLOUD SOLUTIONS</span>
+                    <h2 class="text-3xl font-bold mb-4">Custom Solutions For Your Business Needs</h2>
+                    <p class="text-gray-600 mb-5">We understand every business is unique. Our cloud architects will work with you to design a solution tailored to your specific requirements.</p>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="text-blue-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h3 class="font-semibold">Hybrid Cloud</h3>
+                                <p class="text-gray-600">Bridge your on-premises infrastructure with public cloud resources.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="text-blue-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h3 class="font-semibold">Multi-Cloud</h3>
+                                <p class="text-gray-600">Distribute workloads across multiple cloud providers for redundancy.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="text-blue-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h3 class="font-semibold">Serverless</h3>
+                                <p class="text-gray-600">Build applications without managing servers for optimal efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-16">
+        <div class="container px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600">Pay only for what you use with no upfront costs or termination fees</p>
+                
+                <div class="mt-8">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active">Monthly</button>
+                        <button type="button" class="btn btn-outline-primary">Annual (Save 20%)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-5">Starter</h3>
+                        <div class="text-4xl font-bold mb-2">$49</div>
+                        <div class="text-gray-500 mb-6">per month</div>
+                        <ul class="mb-7">
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 2 vCPU Cores</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 4GB Memory</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 50GB SSD Storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 1TB Transfer</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Basic Support</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-full">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-xl border-2 border-blue-500 transform scale-105 h-full">
+                        <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+                        <h3 class="text-xl font-semibold mb-5">Professional</h3>
+                        <div class="text-4xl font-bold mb-2">$149</div>
+                        <div class="text-gray-500 mb-6">per month</div>
+                        <ul class="mb-7">
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 4 vCPU Cores</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 8GB Memory</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 150GB SSD Storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 5TB Transfer</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Priority Support</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Automated Backups</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-5">Enterprise</h3>
+                        <div class="text-4xl font-bold mb-2">$499</div>
+                        <div class="text-gray-500 mb-6">per month</div>
+                        <ul class="mb-7">
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 8 vCPU Cores</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 16GB Memory</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 500GB SSD Storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 20TB Transfer</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Support</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Dedicated Resources</li>
+                            <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> SLA Guarantee</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-full">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Trusted By Thousands Of Businesses</h2>
+                <p class="text-xl text-gray-600">Don't just take our word for it - hear what our customers say</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-5">"Migrating to SkyNimbus reduced our infrastructure costs by 40% while improving performance. The support team is incredibly responsive."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-12 h-12 rounded-full mr-3 object-cover">
+                            <div>
+                                <div class="font-semibold">Sarah Johnson</div>
+                                <div class="text-gray-500 text-sm">CTO, TechForward</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-5">"The seamless scalability allowed us to handle unexpected traffic spikes during our product launch without any downtime. Game changer!"</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-12 h-12 rounded-full mr-3 object-cover">
+                            <div>
+                                <div class="font-semibold">Michael Chen</div>
+                                <div class="text-gray-500 text-sm">Founder, AppVenture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-6 rounded-xl shadow-md h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-5">"Their security features gave us the confidence to move sensitive financial data to the cloud. Compliance documentation was impeccable."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-12 h-12 rounded-full mr-3 object-cover">
+                            <div>
+                                <div class="font-semibold">Emma Rodriguez</div>
+                                <div class="text-gray-500 text-sm">CEO, FinanceCloud</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container px-6">
+            <div class="row">
+                <div class="col-lg-6 mb-10 mb-lg-0">
+                    <h2 class="text-3xl font-bold mb-5">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions about our services or need help getting started? Our cloud experts are available 24/7 to assist you.</p>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-500 mr-3 mt-1 text-xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3 class="font-semibold">Office</h3>
+                                <p class="text-gray-600">123 Cloud Avenue, Suite 100<br>San Francisco, CA 94107</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-500 mr-3 mt-1 text-xl"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h3 class="font-semibold">Phone</h3>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-500 mr-3 mt-1 text-xl"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h3 class="font-semibold">Email</h3>
+                                <p class="text-gray-600">hello@skynimbus.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-6">Send us a message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="name">Name</label>
+                                <input type="text" id="name" class="form-control w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="form-control w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                <textarea id="message" rows="4" class="form-control w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full py-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="gradient-bg text-white py-12">
+        <div class="container px-6">
+            <div class="row">
+                <div class="col-lg-4 mb-8 mb-lg-0">
+                    <h3 class="text-2xl font-bold mb-4"><i class="fas fa-cloud mr-2"></i>SkyNimbus</h3>
+                    <p class="mb-4 opacity-90">Empowering businesses with cloud technology since 2015. Trusted by companies worldwide for reliable cloud infrastructure.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-200 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 text-xl"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2 mb-8 mb-sm-0">
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-90 hover:opacity-100">About Us</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Careers</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Blog</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-lg-2 mb-8 mb-sm-0">
+                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Documentation</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">API Reference</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Community</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <h4 class="font-semibold text-lg mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Privacy</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Terms</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">Cookie Policy</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100">GDPR</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mt-8 mt-lg-0">
+                    <h4 class="font-semibold text-lg mb-4">Newsletter</h4>
+                    <div class="mb-4">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20">
+                    </div>
+                    <button class="btn btn-light rounded-pill w-full">Subscribe</button>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center opacity-90">
+                <p>© 2023 SkyNimbus Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if(target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 70
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
