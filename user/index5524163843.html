@@ -1,0 +1,330 @@
+Here's a visually stunning landing page for a text-to-speech AI service with a form:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceGen - AI Text to Speech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        }
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        .voice-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .voice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .play-btn {
+            transition: all 0.3s ease;
+        }
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Transform Text into Natural-Sounding Speech</h1>
+                <p class="text-xl md:text-2xl mb-10 opacity-90">Our AI voices sound so natural, you'll think they're human. Experience the future of speech synthesis today.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white text-indigo-600 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300">Try for Free</button>
+                    <button class="border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:bg-opacity-10 transition duration-300">See Demo</button>
+                </div>
+            </div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Our AI Voice Generator</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Professional quality speech synthesis with advanced AI technology</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center px-6">
+                    <div class="feature-icon bg-indigo-100 text-indigo-600">
+                        <i class="fas fa-microphone-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">120+ Natural Voices</h3>
+                    <p class="text-gray-600">Choose from a wide variety of lifelike voices in multiple languages and accents.</p>
+                </div>
+                <div class="text-center px-6">
+                    <div class="feature-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-sliders-h text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Customizable Settings</h3>
+                    <p class="text-gray-600">Adjust pitch, speed, and emphasis to create the perfect voice for your needs.</p>
+                </div>
+                <div class="text-center px-6">
+                    <div class="feature-icon bg-pink-100 text-pink-600">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Instant Conversion</h3>
+                    <p class="text-gray-600">Generate high-quality audio in seconds with our lightning-fast processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience the Power of Our AI</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Listen to how natural our text-to-speech AI sounds</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="voice-card bg-white p-6 shadow-lg">
+                    <div class="bg-indigo-100 p-4 rounded-lg mb-6">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Emma Voice" class="w-full rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emma (English)</h3>
+                    <p class="text-gray-600 mb-4">Warm and professional American female voice</p>
+                    <button class="play-btn bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div class="voice-card bg-white p-6 shadow-lg">
+                    <div class="bg-purple-100 p-4 rounded-lg mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="David Voice" class="w-full rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">David (English)</h3>
+                    <p class="text-gray-600 mb-4">Clear and authoritative British male voice</p>
+                    <button class="play-btn bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div class="voice-card bg-white p-6 shadow-lg">
+                    <div class="bg-pink-100 p-4 rounded-lg mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Sophie Voice" class="w-full rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sophie (French)</h3>
+                    <p class="text-gray-600 mb-4">Elegant and expressive French female voice</p>
+                    <button class="play-btn bg-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text to Speech Form -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 gradient-bg p-10 text-white flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-4">Try Our Text-to-Speech</h2>
+                        <p class="mb-8">Enter your text below and experience the most natural sounding AI voices available today.</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-headphones-alt text-4xl mr-4"></i>
+                            <div>
+                                <h3 class="font-bold text-xl">Pro Tip:</h3>
+                                <p>Use SSML tags for advanced control over pronunciation and intonation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-10">
+                        <form id="ttsForm">
+                            <div class="mb-6">
+                                <label for="textInput" class="block text-gray-700 font-bold mb-2">Enter Your Text</label>
+                                <textarea id="textInput" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Type or paste your text here..."></textarea>
+                            </div>
+                            <div class="mb-6">
+                                <label for="voiceSelect" class="block text-gray-700 font-bold mb-2">Select Voice</label>
+                                <select id="voiceSelect" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                    <option value="emma">Emma - English (US)</option>
+                                    <option value="david">David - English (UK)</option>
+                                    <option value="sophie">Sophie - French</option>
+                                    <option value="hans">Hans - German</option>
+                                    <option value="akari">Akari - Japanese</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <label for="speed" class="block text-gray-700 font-bold mb-2">Speed</label>
+                                    <input type="range" id="speed" min="0.5" max="2" step="0.1" value="1" class="w-full">
+                                    <div class="flex justify-between text-sm text-gray-600 mt-1">
+                                        <span>Slower</span>
+                                        <span>Faster</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="pitch" class="block text-gray-700 font-bold mb-2">Pitch</label>
+                                    <input type="range" id="pitch" min="0.5" max="2" step="0.1" value="1" class="w-full">
+                                    <div class="flex justify-between text-sm text-gray-600 mt-1">
+                                        <span>Lower</span>
+                                        <span>Higher</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300">
+                                <i class="fas fa-microphone-alt mr-2"></i> Convert to Speech
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Content?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of creators, developers, and businesses using our AI voice technology.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-indigo-600 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300">Get Started - Free</button>
+                <button class="border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:bg-opacity-10 transition duration-300">Schedule a Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">VoiceGen AI</h3>
+                    <p class="text-gray-400">The most advanced text-to-speech technology powered by artificial intelligence.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">API</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg bg-gray-800 text-white focus:outline-none w-full">
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 VoiceGen AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Handle form submission
+            $('#ttsForm').on('submit', function(e) {
+                e.preventDefault();
+                const text = $('#textInput').val().trim();
+                const voice = $('#voiceSelect').val();
+                const speed = $('#speed').val();
+                const pitch = $('#pitch').val();
+                
+                if (!text) {
+                    alert('Please enter some text to convert.');
+                    return;
+                }
+                
+                // In a real application, you would send this data to your API
+                console.log('Sending to TTS API:', {
+                    text: text,
+                    voice: voice,
+                    speed: speed,
+                    pitch: pitch
+                });
+                
+                // Simulate processing
+                $('button[type="submit"]').html('<i class="fas fa-spinner fa-spin mr-2"></i> Processing...').prop('disabled', true);
+                
+                // Simulate success (replace with actual API call)
+                setTimeout(function() {
+                    $('button[type="submit"]').html('<i class="fas fa-check mr-2"></i> Success! Play Now').prop('disabled', false);
+                    // Here you would play the audio from the API response
+                }, 2000);
+            });
+            
+            // Handle play button clicks on voice demos
+            $('.play-btn').on('click', function() {
+                const parentCard = $(this).closest('.voice-card');
+                const button = $(this);
+                
+                button.html('<i class="fas fa-spinner fa-spin"></i>');
+                
+                // Simulate audio play (replace with actual audio playback)
+                setTimeout(function() {
+                    button.html('<i class="fas fa-play"></i>');
+                    parentCard.find('img').css('box-shadow', '0 0 0 3px rgba(99, 102, 241, 0.5)');
+                    
+                    setTimeout(function() {
+                        parentCard.find('img').css('box-shadow', 'none');
+                    }, 2000);
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
+```
