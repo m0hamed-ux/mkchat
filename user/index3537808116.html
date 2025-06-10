@@ -1,0 +1,88 @@
+I'll create a simple HTML table for you with clean styling. Here's the `index.html` file with a responsive table:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="px-6 py-4 bg-blue-600">
+            <h2 class="text-2xl font-semibold text-white">Employee Directory</h2>
+        </div>
+        <div class="p-6 overflow-x-auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Position</th>
+                        <th>Join Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Smith</td>
+                        <td>Marketing</td>
+                        <td>Digital Strategist</td>
+                        <td>2021-03-15</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Sarah Johnson</td>
+                        <td>Engineering</td>
+                        <td>Frontend Developer</td>
+                        <td>2020-11-02</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Michael Chen</td>
+                        <td>Sales</td>
+                        <td>Account Executive</td>
+                        <td>2022-01-20</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Lisa Rodriguez</td>
+                        <td>Human Resources</td>
+                        <td>HR Manager</td>
+                        <td>2019-08-10</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>David Wilson</td>
+                        <td>Finance</td>
+                        <td>Financial Analyst</td>
+                        <td>2022-05-15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+```
