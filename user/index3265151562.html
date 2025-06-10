@@ -1,0 +1,149 @@
+Here's a clean, modern todo list application built with vanilla JavaScript and styled with Tailwind CSS:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .completed {
+            text-decoration: line-through;
+            color: #9ca3af;
+        }
+        .task-item:hover .delete-btn {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-2xl">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+                <h1 class="text-3xl font-bold">My Tasks</h1>
+                <p class="opacity-90">What's on your mind today?</p>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex gap-2 mb-6">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="Add new task..." 
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                    <button 
+                        id="addTaskBtn" 
+                        class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div id="taskList" class="space-y-2">
+                    <!-- Tasks will be added here dynamically -->
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center">
+                    <div id="taskCounter" class="text-gray-700">0 tasks</div>
+                    <button 
+                        id="clearCompletedBtn" 
+                        class="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+                    >
+                        Clear completed
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const taskInput = document.getElementById('taskInput');
+            const addTaskBtn = document.getElementById('addTaskBtn');
+            const taskList = document.getElementById('taskList');
+            const taskCounter = document.getElementById('taskCounter');
+            const clearCompletedBtn = document.getElementById('clearCompletedBtn');
+
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+            function renderTasks() {
+                taskList.innerHTML = '';
+                tasks.forEach((task, index) => {
+                    const taskItem = document.createElement('div');
+                    taskItem.className = 'task-item flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors';
+                    
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.className = 'mr-3 h-5 w-5 rounded-lg';
+                    checkbox.checked = task.completed;
+                    checkbox.addEventListener('change', () => toggleTask(index));
+
+                    const taskText = document.createElement('span');
+                    taskText.className = `flex-1 ${task.completed ? 'completed' : ''}`;
+                    taskText.textContent = task.text;
+
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.className = 'delete-btn ml-2 text-gray-400 hover:text-red-500 transition-colors opacity-0';
+                    deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+                    deleteBtn.addEventListener('click', () => removeTask(index));
+
+                    taskItem.appendChild(checkbox);
+                    taskItem.appendChild(taskText);
+                    taskItem.appendChild(deleteBtn);
+                    
+                    taskList.appendChild(taskItem);
+                });
+
+                updateCounter();
+            }
+
+            function addTask() {
+                const text = taskInput.value.trim();
+                if (text) {
+                    tasks.push({ text, completed: false });
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+                    taskInput.value = '';
+                    renderTasks();
+                }
+            }
+
+            function removeTask(index) {
+                tasks.splice(index, 1);
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                renderTasks();
+            }
+
+            function toggleTask(index) {
+                tasks[index].completed = !tasks[index].completed;
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                renderTasks();
+            }
+
+            function clearCompleted() {
+                tasks = tasks.filter(task => !task.completed);
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                renderTasks();
+            }
+
+            function updateCounter() {
+                const total = tasks.length;
+                const completed = tasks.filter(task => task.completed).length;
+                taskCounter.textContent = `${completed}/${total} tasks completed`;
+            }
+
+            addTaskBtn.addEventListener('click', addTask);
+            taskInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') addTask();
+            });
+            clearCompletedBtn.addEventListener('click', clearCompleted);
+
+            renderTasks();
+        });
+    </script>
+</body>
+</html>
+```
